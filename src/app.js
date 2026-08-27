@@ -13,7 +13,8 @@ const routes = new Map([
   })],
   ["GET /api/v1/domain", () => ({ status: 200, body: { data: domain } })],
 ]);
-
+console.log(routes);
+console.log("Registered routes:");
 function sendJson(response, status, body, requestId) {
   const payload = JSON.stringify(body);
 
