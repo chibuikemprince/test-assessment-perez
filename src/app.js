@@ -15,6 +15,7 @@ const routes = new Map([
 ]);
 console.log(routes);
 console.log("Registered routes:");
+
 function sendJson(response, status, body, requestId) {
   const payload = JSON.stringify(body);
 
@@ -26,6 +27,7 @@ function sendJson(response, status, body, requestId) {
   response.end(payload);
 }
 
+console.log("Registered routes:");
 function createApp(options = {}) {
   const now = options.now ?? (() => new Date());
   const createRequestId = options.createRequestId ?? randomUUID;
