@@ -28,6 +28,8 @@ function sendJson(response, status, body, requestId) {
 }
 
 console.log("Registered routes:");
+// Log the registered routes for debugging purposes
+console.log([...routes.keys()].join("\n"));
 function createApp(options = {}) {
   const now = options.now ?? (() => new Date());
   const createRequestId = options.createRequestId ?? randomUUID;
